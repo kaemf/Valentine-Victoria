@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="./data/style.css">
+    <style id="dynamic"></style>
+</head>
+<body>
+    <div id="falling-hearts"></div>
+    <div class="bsod" comment="she say no, fuck"></div>
+
+    <div class="entire-screen">
+        <div class="valentine-container fade-in">
+            <div class="main-part">
+                <div class="text-appear">Вікторіє, будеш моєю Валентиною? 💖</div>
+                <div class="button-group">
+                    <button class="btn-accept pulse" onclick="handleLoveYes()">Так, моя киця!</button>
+                    <div class="btn-deny-group">
+                        <button class="btn-deny wobble" onclick="handleLoveNo()">Ніколи в житті!</button>
+                        <button class="deny-empty">Ніколи в житті!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container zoom-effect">
+                <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="she-say-yes">
+        <div class="yes-container fade-in">
+            <h1 class="header-text bounce-in">Я так і думав! Кохаю тебе❤️</h1>
+            <div class="gif-container">
+                <img src="./data/cat-kiss.gif" alt="Happy GIF" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <script src="./data/script.js"></script>
+</body>
+</html>
