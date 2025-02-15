@@ -16,15 +16,15 @@
             <div class="main-part">
                 <div class="text-appear">Вікторіє, будеш моєю Валентиною? 💖</div>
                 <div class="button-group">
-                    <button class="btn-accept pulse" onclick="handleLoveYes()">Так, моя киця!</button>
+                    <button class="btn-accept pulse">Так, моя киця!</button>
                     <div class="btn-deny-group">
-                        <button class="btn-deny wobble" onclick="handleLoveNo()">Ніколи в житті!</button>
+                        <button class="btn-deny wobble">Ніколи в житті!</button>
                         <button class="deny-empty">Ніколи в житті!</button>
                     </div>
                 </div>
             </div>
             <div class="image-container zoom-effect">
-                <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" loading="lazy">
+                <img src="./data/source/intro-bear.gif">
             </div>
         </div>
     </div>
@@ -33,10 +33,15 @@
         <div class="yes-container fade-in">
             <h1 class="header-text bounce-in">Я так і думав! Кохаю тебе❤️</h1>
             <div class="gif-container">
-                <img src="./data/cat-kiss.gif" alt="Happy GIF" loading="lazy">
+                <img src="./data/source/cat-kiss.gif" alt="Happy GIF" loading="lazy">
             </div>
         </div>
     </div>
-    <script src="./data/script.js"></script>
+    <script src="./data/event/init.js"></script>
+    <script src="./data/event/handleYes.js"></script>
+    <script src="./data/event/handleNo.js"></script>
+    <script src="./data/event/listener.js"></script>
+    <script src="./data/event/motion_compute.js"></script>
+    <script src="./data/event/hearts.js"></script>
 </body>
 </html>
