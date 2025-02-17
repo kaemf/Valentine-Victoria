@@ -3,12 +3,14 @@ function handleNo() {
   textElement.textContent = variants.textVariants[noStep];
   denyButton.textContent = variants.buttonsVarinats.deny[noStep];
   acceptButton.textContent = variants.buttonsVarinats.accept[noStep];
+  denyEmpty.textContent = variants.buttonsVarinats.deny[noStep];
+
   if (noStep <= 6){
     setTimeout(() => {
       denyButton.style.top = 'auto';
       denyButton.style.left = 'auto';
       bsod.style.display = "none";
-    }, 2 * 600)
+    }, intervalToHideBSOD(noStep));
   }
   else{
     denyButton.removeEventListener("click", handleNo);

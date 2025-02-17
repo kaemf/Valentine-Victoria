@@ -7,6 +7,7 @@ const denyButton = document.querySelector(".btn-deny"),
   SSY = document.querySelector(".she-say-yes"),
   ES = document.querySelector(".entire-screen"),
   imContainer = document.querySelector(".image-container"),
+  intervalToHideBSOD = (entireMultiplier) => {return entireMultiplier == 0 ? 2 * 1000 : (entireMultiplier * 2) * 1000}
   variants = {
     textVariants: [
       "Даю можливість передумати, кохана :)",
