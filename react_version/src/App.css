@@ -1,0 +1,301 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #fde2e4;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  user-select: none;
+  animation: bg-fade 3s ease-in-out;
+  position: relative;
+  transition: all 3s ease-in-out;
+}
+
+@keyframes bg-fade {
+  0% { background-color: #eea6aa; }
+  50% { background-color: #ffcccc; }
+  100% { background-color: #fde2e4; }
+}
+
+.valentine-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.text-appear {
+  font-size: 2.8em;
+  color: #d92027;
+  font-weight: bold;
+  animation: text-pop 1.5s ease-in-out;
+}
+
+@keyframes text-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.button-group {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.btn-accept, .btn-deny, .deny-empty {
+  font-size: 1.5em;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn-accept {
+  background-color: #ff165d;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.btn-accept:hover {
+  background-color: #e01450;
+  transform: scale(1.1);
+}
+
+.deny-empty{
+  opacity: 0;
+}
+
+.btn-deny {
+  background-color: black;
+  color: white;
+  animation: wobble 1.5s infinite;
+  z-index: 1000;
+  /* white-space: nowrap; */
+  display: inline-block;
+  position: fixed;
+}
+
+.btn-deny:hover {
+  background-color: #2a3ea0;
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+.image-container {
+  animation: zoom-effect 1.5s ease-in-out forwards;
+}
+
+@keyframes zoom-effect {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@-webkit-keyframes wobble {
+  0%,
+  50%,
+  100% {
+      transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(10deg);
+  }
+
+  75% {
+      transform: rotate(-10deg);
+  }
+}
+
+@keyframes wobble {
+
+  0%,
+  50%,
+  100% {
+      transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(10deg);
+  }
+
+  75% {
+      transform: rotate(-10deg);
+  }
+}
+
+#falling-hearts {
+  animation: wobble 60s ease-in infinite;
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.heart {
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1000;
+  position: fixed;
+}
+
+.image-container > img {
+  border-radius: 10px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.button-group-deny{
+  position: relative;
+}
+
+.main-part{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@keyframes bounce{
+  0% {
+  animation-timing-function: ease-in;
+  transform: translateY(0px);
+}
+
+38% {
+  animation-timing-function: ease-out;
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+55% {
+  animation-timing-function: ease-in;
+  transform: translateY(80px);
+}
+
+72% {
+  animation-timing-function: ease-out;
+  transform: translateY(20px);
+}
+
+100% {
+  animation-timing-function: ease-in;
+  transform: translateY(0px);
+}
+}
+
+.bsod{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url('https://media.kasperskydaily.com/wp-content/uploads/sites/92/2016/04/06022419/windows-new-bsod-featured.jpg');
+  background-size: contain;
+  z-index: 10001;
+  display: none;
+}
+
+.entire-screen{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: all .3s ease;
+}
+
+.she-say-yes{
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  transition: all .3s ease;
+}
+
+.gif-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  font-size: 3em;
+  color: #ff477e;
+  font-weight: bold;
+  text-align: center;
+  animation: bounce-in 1.5s ease-in-out;
+}
+
+.gif-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+}
